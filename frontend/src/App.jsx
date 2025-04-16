@@ -1,10 +1,19 @@
-import React from 'react'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
   return (
-    <div >
-      <h1 className="text-3xl font-bold underline">Subscribe to my channel</h1></div>
-  )
-}
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+};
 
-export default App
+export default App;
